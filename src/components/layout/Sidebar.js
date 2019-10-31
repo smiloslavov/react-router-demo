@@ -7,7 +7,9 @@ const Sidebar = () => {
         {name: 'Props', url: '/props'},
         {name: '404 Error', url: '/foo'},
         {name: 'Color', url: '/color'},
+        {name: 'Recursive', url: '/color/Green/00ff00'},
         {name: 'Logging', url: '/logging'},
+        {name: 'Private', url: '/private'},
     ];
 
     let linksComponents = links.map( (link, index) => {
@@ -29,6 +31,9 @@ const Sidebar = () => {
                     </NavLink>
                 </li>
                 {linksComponents}
+                <Link to='/pets'>
+                    <img src='/assets/unicorn.png' width={100} />
+                </Link>
             </ul>
         </div>
     );
